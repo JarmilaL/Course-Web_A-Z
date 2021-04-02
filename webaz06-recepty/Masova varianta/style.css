@@ -1,0 +1,209 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html { box-sizing: border-box; }
+*, :after, :before { box-sizing: inherit; }
+
+
+/* -------------------------------------------------- */
+
+/*
+pouzivame mobile first pristup
+tj. vychozi styly mimo media query jsou pro nejmensi mobilni zarizeni (telefony)
+s pribyvajici sirkou pridavame media query pro...
+tablety:
+@media (min-width: 480px) {
+}
+notebook/pc:
+@media (min-width: 860px) {
+}
+*/
+
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.paticka {
+    text-align: center;
+    font-size: 14px;
+    color: silver;
+}
+
+.paticka a {
+    color: silver;
+}
+
+.recepty {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+}
+
+.hlavni-recept {
+    display: flex;
+    flex: 0 0 100%;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                        url("images/burger.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 200px;
+    position: relative;
+    border-bottom: 1px solid white;
+}
+
+.male-recepty {
+    flex: 0 0 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.asie,
+.drubez,
+.omacky,
+.gril {
+    position: relative;
+    flex: 0 0 100%;
+    min-height: 90px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-bottom: 1px solid white;
+}
+
+.asie {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                        url("images/sushi.jpg");
+}
+
+.drubez {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                        url("images/kure.jpg");
+
+}
+
+.omacky {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                        url("images/rajcata.jpg");
+
+}
+
+.gril {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                        url("images/grilovani.jpg");
+    border-bottom: none;
+}
+
+.nadpis-hlavni,
+.nadpis {
+    margin: 0;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.nadpis-hlavni {
+    font-size: 28px;
+}
+
+.nadpis {
+    font-size: 18px;
+}
+
+.info {
+    position: relative;
+}
+
+.info p {
+    margin: 0;
+}
+
+.sekce {
+    position: absolute;
+    padding: 10px;
+    top: 0;
+    left: 0;
+}
+
+.komentare {
+    position: absolute;
+    padding: 10px;
+    top: 0;
+    right: 0;
+}
+
+
+
+@media (min-width: 480px) {
+    .hlavni-recept {
+        min-height: 250px;
+    }
+
+    .asie,
+    .drubez,
+    .omacky,
+    .gril {
+        flex: 0 0 50%;
+        min-height: 150px;
+    }
+
+    .asie,
+    .omacky {
+        border-right: 1px solid white;
+    }
+
+    .info p {
+        padding: 20px;
+    }
+
+    .nadpis-hlavni {
+        font-size: 36px;
+        padding: 20px;
+    }
+
+    .nadpis {
+        font-size: 22px;
+        padding: 20px;
+    }
+}
+
+@media (min-width: 860px) {
+    .recepty {
+        flex-direction: row;
+    }
+
+    .hlavni-recept {
+        min-height: 400px;
+        flex: 0 0 calc(100% / 3);
+        border-right: 1px solid white;
+    }
+
+    .male-recepty {
+        flex: 0 0 calc((100% / 3) * 2);
+    }
+
+    .asie,
+    .drubez,
+    .omacky,
+    .gril {
+        flex: 0 0 50%;
+        min-height: 200px;
+    }
+
+    .nadpis-hlavni {
+        font-size: 48px;
+    }
+
+    .nadpis {
+        font-size: 28px;
+    }
+}
+

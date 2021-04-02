@@ -1,0 +1,77 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html { box-sizing: border-box; }
+*, :after, :before { box-sizing: inherit; }
+
+body {
+	font-family: sans-serif;
+	font-size: 14px;
+}
+
+/* ---------------------------------------------------- */
+.hlavni-nadpis {
+	text-align: center;
+}
+
+.tym {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.osoba {
+	flex: 0 0 100%;
+	margin: 10px 0;
+	border: 1px solid silver;
+	border-radius: 5px;
+	box-shadow: 1px 1px 5px silver;
+	text-align: center;
+}
+
+.fotka {
+	padding-top: 10px;
+}
+
+.fotka img {
+	width: 100px;
+	border-radius: 50%;
+}
+
+.obsah {
+	padding: 10px;
+	margin: 0;
+}
+
+.obsah h2 {
+	margin: 0;
+}
+
+@media (min-width: 540px) {
+	.osoba {
+		display: flex;
+		flex: 0 0 calc((100% - 20px) / 2);
+	}
+
+	.fotka {
+		padding-left: 10px;
+	}
+
+	.fotka img {
+		width: 80px;
+	}
+
+	.obsah {
+		padding-left: 10px;
+		text-align: left;
+	}
+}
+
+@media (min-width: 960px) {
+	.osoba {
+		display: block;
+		flex: 0 0 calc((100% - 60px) / 4);
+	}
+
+	.obsah {
+		text-align: center;
+	}
+}

@@ -1,0 +1,128 @@
+/* nejsme vcerejsi, pouzivame moderni a intuitivni box model */
+html { box-sizing: border-box; }
+*, ::after, ::before { box-sizing: inherit; }
+
+/*
+	BARVY
+	czechitas  #b92e81
+	pozadi     #bdc3c7
+	tmava      #31363b
+	delitka    #3f464d
+	portfolio  #e74c3c
+	facebook   #3b5998
+	twitter    #1da1f2
+
+	hlavicka a tlacitka: font-family: 'Montserrat', sans-serif;
+	text: font-family: 'Source Sans Pro', sans-serif;
+*/
+
+
+body {
+	background-color: #bdc3c7;
+	font-weight: 400;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.profil {
+	background-color: #31363b;
+	color: #bdc3c7;
+	margin: 50px 100px;
+	width: 250px;
+	box-shadow: 0 1px 9px #31363b;
+}
+
+.hlavicka {
+	position: relative;
+	margin: 0;
+	padding: 0;
+
+}
+
+.foto {
+	width: 100%;
+}
+
+.logo {
+	position: absolute;
+	bottom: -25px;
+	right: 30px;
+	background-color: #b92e81;
+	border-radius: 50%;
+	box-shadow: 0 1px 8px black;
+
+}
+
+.obsah {
+	padding: 20px;
+}
+
+h1 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.5em;
+	color: white;
+}
+
+p {
+	font-family: 'Source Sans Pro', sans-serif;
+	color: #bdc3c7;
+	font-size: 90%;
+}
+
+.odkazy {
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 80%;
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+}
+
+.portfolio,
+.facebook,
+.twitter {
+	padding: 1em;
+}
+
+.portfolio {
+	flex-basis: 100%;
+	border-top: 1px solid #3f464d;
+	border-bottom: 1px solid #3f464d;
+}
+
+.facebook,
+.twitter {
+	flex-basis: 50%;
+}
+
+.facebook {
+	border-right: 1px solid #3f464d;
+}
+
+.odkazy a {
+	color: #bdc3c7;
+	text-decoration: none;
+}
+
+.portfolio:hover,
+.portfolio:focus,
+.portfolio:active {
+	background-color: #e74c3c;
+	color: white;
+}
+
+.facebook:hover,
+.facebook:focus,
+.facebook:active {
+	background-color: #3b5998;
+	color: white;
+}
+
+.twitter:hover,
+.twitter:focus,
+.twitter:active {
+	background-color: #1da1f2;
+	color: white;
+}
